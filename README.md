@@ -15,6 +15,7 @@
 Симуляция: Kerbal Space Program
 
 # Ссылки
+[Видео на Youtube](https://youtu.be/9_jOfhB6b-M)
 
 # Директории:
 1. Models - файлы моделей, использованных в проекте.
