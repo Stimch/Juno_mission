@@ -4,7 +4,7 @@
 # Состав команды
 Агейкин Е. А. - ​KSP, Видеомонтаж
 
-Цветковский И. А. - Тимлид
+Цветковский И. А. - Тимлид, построение мат. моделей, KSP
 
 Грузинцев Я. А. - ​Программист
 
@@ -16,6 +16,7 @@
 
 # Ссылки
 [Видео на Youtube](https://youtu.be/9_jOfhB6b-M)
+
 [Research Document](https://docs.google.com/document/d/12NEtoWkeKMTiM3ShJ-TQhK2-Ngo3yKUdsegZgKDTU3g/edit#heading=h.3rdcrjn)
 
 # Директории:
