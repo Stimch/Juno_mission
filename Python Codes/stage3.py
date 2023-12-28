@@ -1,7 +1,7 @@
 from math import *
 import json
 
-with open('original/data.txt', 'r') as file_in:
+with open('data.txt', 'r') as file_in:
     PastValues = json.load(file_in)
 
 density0 = 1.225
@@ -13,11 +13,11 @@ T_air = 290
 g = 9.80665
 S = 10.3 ** 2 * pi / 4
 c = 0.03
-m0 = 30693
-flight_time_3 = 228
+m0 = 6100
+flight_time_3 = 120
 angle_new = (10 * pi / 180) / flight_time_3 #
 angle_past = (61 + 15) * pi / 180 #
-angle = (88 * pi / 180) / flight_time_3 #
+angle = (90 * pi / 180) / flight_time_3 #
 
 Ft3 = 30.4 * 9800
 m_release = 84.7
@@ -60,5 +60,5 @@ getValues(PastValues, flight_time_3)
 for i in PastValues:
     print(i)
 
-with open('original/data.txt', 'w') as file_out:
+with open('data.txt', 'w') as file_out:
     json.dump(PastValues, file_out)

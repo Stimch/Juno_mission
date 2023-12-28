@@ -59,7 +59,6 @@ def getValues(PastValues, flight_time):
         speed_y = Euler(PastValues[-1][1][1], acc_y)
         coord_y = Euler(PastValues[-1][2][1], PastValues[-1][1][1])
         PastValues.append([[acc_x, acc_y], [speed_x, speed_y], [coord_x, coord_y]])
-
 getValues(PastValues, flight_time_1)
 for i in PastValues:
     print(i)
@@ -70,5 +69,5 @@ t = [t[-1] for t in PastValues]
 x = [x[-2][0] for x in PastValues]
 y = [x[-2][1] for x in PastValues]
 
-with open('original/data.txt', 'w') as file_out:
+with open('data.txt', 'w') as file_out:
     json.dump(PastValues, file_out)

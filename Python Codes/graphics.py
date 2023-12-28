@@ -6,7 +6,7 @@ R_earth = 6371000
 
 plt.style.use('grayscale')
 
-with open('original/data.txt', 'r') as fr:   # Читаем данные с прошлых этапов
+with open('data.txt', 'r') as fr:   # Читаем данные с прошлых этапов
     PastValues = json.load(fr)
 
 def Correction(x, y):
@@ -20,8 +20,9 @@ v = [sqrt(v[1][1] ** 2 + v[1][0] ** 2) for v in PastValues]
 
 plt.rcParams['font.size'] = 10
 
-t = list(arange(0, 527.81, 0.01))
-
+t = list(arange(0.0, 512.01, 0.01))
+print(len(t))
+print(len(a))
 plt.subplot(2, 1, 1)
 plt.plot(t, a)
 plt.title("Ускорение(t)")

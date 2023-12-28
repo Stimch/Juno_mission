@@ -2,7 +2,7 @@ from math import *
 from matplotlib import pyplot as plt
 import json
 
-with open('original/data.txt', 'r') as file_in:
+with open('data.txt', 'r') as file_in:
     PastValues = json.load(file_in)
 
 density0 = 1.225
@@ -13,9 +13,9 @@ T_air = 290
 
 g = 9.80665 #
 S = 10.3 ** 2 * pi / 4
-m0 = 96752
+m0 = 33000
 c = 0.03
-flight_time_2 = 182
+flight_time_2 = 184
 angle_new = (17 * pi / 180) / flight_time_2 #
 angle_past = 61 * pi / 180 #
 angle = (78 * pi / 180) / flight_time_2 #
@@ -68,5 +68,5 @@ for i in PastValues:
     print(i)
 
 
-with open('original/data.txt', 'w') as file_out:
+with open('data.txt', 'w') as file_out:
     json.dump(PastValues, file_out)
