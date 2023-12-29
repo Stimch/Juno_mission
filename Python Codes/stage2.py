@@ -13,15 +13,15 @@ T_air = 290
 
 g = 9.80665 #
 S = 10.3 ** 2 * pi / 4
-m0 = 33000
+m0 = 102000 #
 c = 0.03
-flight_time_2 = 184
+flight_time_2 = 124 #
 angle_new = (17 * pi / 180) / flight_time_2 #
 angle_past = 61 * pi / 180 #
 angle = (78 * pi / 180) / flight_time_2 #
 
-Ft2_max = 94
-Ft2_min = 80.8
+Ft2_max = 234 #
+Ft2_min = 191 #
 
 F = (Ft2_max * 4) * 9800
 F_min = (Ft2_min * 4) * 9800

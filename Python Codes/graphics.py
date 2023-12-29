@@ -2,7 +2,7 @@ import json
 from math import atan, cos, sqrt
 from matplotlib import pyplot as plt
 from numpy import arange
-R_earth = 6371000
+R_kerbin = 600000
 
 plt.style.use('grayscale')
 
@@ -10,7 +10,7 @@ with open('data.txt', 'r') as fr:   # Читаем данные с прошлы�
     PastValues = json.load(fr)
 
 def Correction(x, y):
-    h = R_earth * (1 / cos(atan(x / R_earth)) - 1)
+    h = R_kerbin * (1 / cos(atan(x / R_kerbin)) - 1)
     return y + h
 
 x = [Correction(x[-1][0], x[-1][1]) for x in PastValues]
@@ -18,9 +18,9 @@ y = [x[-1][0] for x in PastValues]
 a = [sqrt(a[0][1] ** 2 + a[0][0] ** 2) for a in PastValues]
 v = [sqrt(v[1][1] ** 2 + v[1][0] ** 2) for v in PastValues]
 
-plt.rcParams['font.size'] = 10
+plt.rcParams['font.size'] = 7
 
-t = list(arange(0.0, 512.01, 0.01))
+t = list(arange(0.0, 410.01, 0.01))
 print(len(t))
 print(len(a))
 plt.subplot(2, 1, 1)

@@ -4,7 +4,7 @@ import json
 
 g = 9.80665 #
 S = 10.3 ** 2 * pi / 4
-m0 = 185000 #
+m0 = 83000 #
 c = 0.08
 flight_time_1 = 102 #
 angle = (61 * pi / 180) / flight_time_1 #
@@ -15,10 +15,10 @@ Mmol = 0.029
 R = 8.31
 T_air = 290
 
-Ft1_max = 104
-Ft2_max = 94
-Ft1_min = 85.6
-Ft2_min = 80.8
+Ft1_max = 387 #
+Ft2_max = 234 #
+Ft1_min = 344 #
+Ft2_min = 191 #
 
 F = (Ft1_max * 8) * 9800
 F_min = (Ft1_min * 8) * 9800

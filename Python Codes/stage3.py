@@ -10,16 +10,16 @@ Mmol = 0.029
 R = 8.31
 T_air = 290
 
-g = 9.80665
+g = 9.80665 #
 S = 10.3 ** 2 * pi / 4
 c = 0.03
-m0 = 6100
-flight_time_3 = 120
+m0 = 33100 #
+flight_time_3 = 184 #
 angle_new = (10 * pi / 180) / flight_time_3 #
 angle_past = (61 + 15) * pi / 180 #
 angle = (90 * pi / 180) / flight_time_3 #
 
-Ft3 = 30.4 * 9800
+Ft3 = 66 * 9800 #
 m_release = 84.7
 hundredth = 0.01
 
