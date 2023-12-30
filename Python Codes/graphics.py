@@ -27,14 +27,16 @@ print(len(a))
 
 plt.subplot(2, 1, 1)
 plt.plot(t, a, color='purple')
+plt.xlabel('t[c]')
+plt.ylabel('a[м/с^2]')
 plt.title("Ускорение(t)")
 
-plt.subplot(2, 2, 3)
-plt.plot(t, y, color='orange')
-plt.title("Высота(t)")
-
-plt.subplot(2, 2, 4)
+plt.subplot(2, 1, 2)
 plt.plot(t, v, color='green')
+plt.xlabel('t[c]')
+plt.ylabel('v[км/ч]')
 plt.title("Скорость(t)")
+
+plt.tight_layout()
 
 plt.show()
