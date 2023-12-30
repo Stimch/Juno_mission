@@ -2,12 +2,12 @@ from math import *
 from matplotlib import pyplot as plt
 import json
 
-g = 9.80665 #
+g = 9.80665
 S = 10.3 ** 2 * pi / 4
-m0 = 83000 #
+m0 = 185000
 c = 0.08
-flight_time_1 = 102 #
-angle = (61 * pi / 180) / flight_time_1 #
+flight_time_1 = 102
+angle = (90 * pi / 180) / flight_time_1
 
 density0 = 1.225
 e = 2.7128
@@ -15,16 +15,16 @@ Mmol = 0.029
 R = 8.31
 T_air = 290
 
-Ft1_max = 387 #
-Ft2_max = 234 #
-Ft1_min = 344 #
-Ft2_min = 191 #
+Ft1_max = 102
+Ft2_max = 30
+Ft1_min = 95
+Ft2_min = 25
 
-F = (Ft1_max * 8) * 9800
-F_min = (Ft1_min * 8) * 9800
+F = (Ft1_max * 2) * 9800 + (Ft2_max * 6) * 9800
+F_min = (Ft1_min * 2) * 9800 + (Ft2_min * 6) * 9800
 F_increase = (F - F_min) / flight_time_1
 
-m_release = 1688
+m_release = 568 + 427
 hundredth = 0.01
 PastValues = [[[0, 0], [0, 0], [0, 0]]]
 
@@ -59,15 +59,10 @@ def getValues(PastValues, flight_time):
         speed_y = Euler(PastValues[-1][1][1], acc_y)
         coord_y = Euler(PastValues[-1][2][1], PastValues[-1][1][1])
         PastValues.append([[acc_x, acc_y], [speed_x, speed_y], [coord_x, coord_y]])
+
 getValues(PastValues, flight_time_1)
 for i in PastValues:
     print(i)
-
-a = [sqrt(a[0][0] ** 2 + a[0][1] ** 2) for a in PastValues]
-t = [t[-1] for t in PastValues]
-
-x = [x[-2][0] for x in PastValues]
-y = [x[-2][1] for x in PastValues]
 
 with open('data.txt', 'w') as file_out:
     json.dump(PastValues, file_out)

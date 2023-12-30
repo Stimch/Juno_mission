@@ -11,22 +11,22 @@ Mmol = 0.029
 R = 8.31
 T_air = 290
 
-g = 9.80665 #
+g = 9.80665
 S = 10.3 ** 2 * pi / 4
-m0 = 102000 #
+m0 = 102000
 c = 0.03
-flight_time_2 = 124 #
-angle_new = (17 * pi / 180) / flight_time_2 #
-angle_past = 61 * pi / 180 #
-angle = (78 * pi / 180) / flight_time_2 #
+flight_time_2 = 22
+angle_new = (17 * pi / 180) / flight_time_2
+angle_past = 61 * pi / 180
+angle = (78 * pi / 180) / flight_time_2
 
-Ft2_max = 234 #
-Ft2_min = 191 #
+Ft2_max = 102
+Ft2_min = 95
 
-F = (Ft2_max * 4) * 9800
-F_min = (Ft2_min * 4) * 9800
+F = (Ft2_max * 2) * 9800
+F_min = (Ft2_min * 2) * 9800
 F_increase = (F - F_min) / flight_time_2
-m_release = 310.0
+m_release = 427
 
 hundredth = 0.01
 
